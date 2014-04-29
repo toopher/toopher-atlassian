@@ -112,24 +112,24 @@ following properties can be set in the `web.xml`.
 Only `TOOPHER_CONSUMER_KEY` and `TOOPHER_CONSUMER_SECRET` are required.
 Exercise caution when editing the other values.
 
-* TOOPHER_CONSUMER_KEY - required. Your Toopher credentials retrieved from the 
+* `TOOPHER_CONSUMER_KEY` - required. Your Toopher credentials retrieved from the 
   [Toopher Dev Site](https://dev.toopher.com/)
-* TOOPHER_CONSUMER_SECRET - required. Your Toopher credentials retrieved from 
+* `TOOPHER_CONSUMER_SECRET` - required. Your Toopher credentials retrieved from 
   the [Toopher Dev Site](https://dev.toopher.com/)
-* BASE_URL - (optional) default: `https://api.toopher.com/v1`. Change this if 
+* `BASE_URL` - (optional) default: `https://api.toopher.com/v1`. Change this if 
   you use an on-premise Toopher API.
-* OPT_OUT_ALLOWED - (optional) default: `false`. Change this to `true` if users 
+* `OPT_OUT_ALLOWED` - (optional) default: `false`. Change this to `true` if users 
   are allowed to bypass Toopher authentication; they will still be prompted, 
   but will be allowed to enter after failing the Toopher login. This is not 
   recommended.
-* AUTOMATION_ALLOWED - (optional) default `true`. Change this to `false` if you 
+* `AUTOMATION_ALLOWED` - (optional) default `true`. Change this to `false` if you 
   do not want to allow automation. This is not recommended.
-* CHALLENGE_REQUIRED - (optional) default `false`. Change this to `true` if 
+* `CHALLENGE_REQUIRED` - (optional) default `false`. Change this to `true` if 
   each request must also include a pattern lock.
-* TOOPHER_SERVLET_URL - (optional) default: `/plugins/servlet/toopher` If the 
+* `TOOPHER_SERVLET_URL` - (optional) default: `/plugins/servlet/toopher` If the 
   Toopher plugin servlet is hosted in a different location, add the proper path 
   here.
-* TOOPHER_RESOURCES_DIRECTORY - (optional) default: 
+* `TOOPHER_RESOURCES_DIRECTORY` - (optional) default: 
   `/download/resources/com.toopher.integrations.atlassian.servlet.toopher-atlassian:resources/`. 
   This location is set by the product (Jira or Confluence) and the Toopher Atlassian plugin.
 
