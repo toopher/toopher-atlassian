@@ -1,0 +1,21 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/toopher-icon.png</param>
+        <param name="plugin-logo">images/toopher-logo.png</param>
+    </plugin-info>
+
+    <component-import key="velocityRenderer" interface="com.atlassian.templaterenderer.TemplateRenderer" />
+
+    <servlet name="Toopher Iframe Servlet" key="toopher-servlet" class="com.toopher.integrations.atlassian.servlet.ToopherIframeServlet">
+        <description>Toopher two-factor authentication servlet.</description>
+        <url-pattern>/toopher</url-pattern>
+        <resource type="velocity" name="template" location="toopher.vm"/>
+    </servlet>
+
+    <web-resource key="resources" name="Web Resources">
+        <resource type="download" name="toopher-web.js" location="js/toopher-web.js"/>
+    </web-resource>
+</atlassian-plugin>
